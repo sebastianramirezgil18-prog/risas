@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Lógica | Profe Risas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --oro: #d4af37;
+            --azul-oscuro: #0a0e1a;
+            --blanco: #ffffff;
+            --gris-oscuro: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--azul-oscuro);
+            color: var(--blanco);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        h2 {
+            color: var(--oro);
+            font-size: 2rem;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-regresar {
+            display: inline-block;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #f6d365 0%, var(--oro) 100%);
+            border: 2px solid var(--oro);
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+            transition: 0.3s ease;
+        }
+
+        .btn-regresar:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
+        }
+
+        .recuadro {
+            background-color: var(--gris-oscuro);
+            border: 2px solid #333;
+            border-left: 5px solid var(--oro);
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            overflow-x: auto; /* Por si el código es muy largo no se rompa en cel */
+            margin-bottom: 60px; /* Espacio antes del footer */
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #e0e0e0;
+            font-size: 14px;
+        }
+
+        /* FOOTER MANTENIENDO EL MISMO DISEÑO EXACTO */
+        footer { 
+            padding: 60px 20px; 
+            text-align: center; 
+            background: black; 
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .social { margin-bottom: 25px; }
+        .social a { color: var(--oro); font-size: 2.2rem; margin: 0 20px; text-decoration: none; transition: 0.3s; }
+        .social a:hover { color: white; }
+    </style>
+</head>
+<body>
+
+    <a href="risas.html" class="btn-regresar">← Volver al Inicio</a>
+
+    <h2>Código de ejercicio de lógica de programación</h2>
+
+    <div class="recuadro">
+        <pre>
+            <code>
+import java.util.Scanner;
+ 
+public class Main {
+    public static void main(String[] args) {
+ 
+        Scanner leer = new Scanner(System.in);
+        int tipoCliente;
+        String nombre;
+        String nombreTipo;
+        double compra, totalPagar;
+        double dcto1=0, dcto2=0, valorDcto1, valorDcto2 , totalDcto ;
+ 
+        System.out.println("...... TIENDA EN LÍNEA EL MEJOR PRECIO .....");
+        System.out.println("Tipo de Cliente");
+        System.out.println(" 1 Nuevo");
+        System.out.println(" 2 Frecuente");
+        System.out.println(" 3 VIP");
+        System.out.println();
+ 
+        System.out.print("opcion-->   ");
+        tipoCliente = leer.nextInt();
+        leer.nextLine(); // <-- Limpiar el buffer
+ 
+        System.out.print("Nombre del cliente: ");
+        nombre = leer.nextLine();
+ 
+        System.out.print("Valor de la compra: ");
+        compra = leer.nextFloat();
+ 
+        switch (tipoCliente) {
+            case 1:
+                dcto1 = 5;
+                nombreTipo="Nuevo";
+                break;
+            case 2:
+                dcto1 = 10;
+                nombreTipo="Frecuente";
+                break;
+            case 3:
+                dcto1 = 15;
+                nombreTipo="VIP";
+                break;
+            default:
+                System.out.println("Error al digitar tipo de cliente....");
+                nombreTipo="Incorrecto";
+                break;
+        }
+
+        if (compra >= 10000000) {
+            dcto2 = 15;
+        } else {
+            dcto2 = 5;
+        }
+
+        valorDcto1 = compra * dcto1 / 100;
+        valorDcto2 = compra * dcto2 / 100;
+        totalDcto = valorDcto1 + valorDcto2;
+        totalPagar = compra - totalDcto;
+         
+        System.out.println(".....FACTURA DE COMPRA.....");
+        System.out.println("Nombre del cliente: " + nombre);
+        System.out.println("Tipo cliente: " + nombreTipo);
+        System.out.printf("Valor de la compra inicial: $%,.1f\n",  compra);
+        System.out.println("Porcentaje concedido por el tipo cliente: " + dcto1 +"%");
+        System.out.println("Valor descuento por tipo cliente:     " + valorDcto1);
+        System.out.println("Porcentaje concedido adicional: " + dcto2 + "%");
+        System.out.println("Valor descuento adicional:     " +  valorDcto2 );
+        System.out.println("Total descuentos: " + totalDcto);
+        System.out.println("Total a pagar: " + totalPagar);
+    }
+}
+            </code>
+        </pre>
+    </div>
+
+    <footer>
+        <div class="social">
+            <a href="https://instagram.com/proferisas" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@proferisas" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100008320491034" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>©️ 2026 Club Risas | Diseñado por <strong>@sebas.dg__</strong></p>
+    </footer>
+
+</body>
+</html>

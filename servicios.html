@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Club Risas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --oro: #d4af37;
+            --azul-oscuro: #0a0e1a;
+            --blanco: #ffffff;
+            --gris-oscuro: rgba(26, 26, 26, 0.85); /* Un toque de transparencia para que se fusione con el fondo */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            /* AQUÍ SE AGREGA servicios.jpg DE FONDO COMO EN RISAS.HTML */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('servicios.jpg') center/cover no-repeat fixed;
+            color: var(--blanco);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* CONTENEDOR DEL BOTÓN SUPERIOR */
+        .nav-superior {
+            padding: 30px 5% 10px 5%;
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Espacio entre los dos botones superiores */
+            flex-wrap: wrap;
+        }
+
+        /* ESTILO DEL BOTÓN DORADO PARA VOLVER Y PRE-INSCRIPCIÓN */
+        .btn-dorado {
+            display: inline-block;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #f6d365 0%, var(--oro) 100%);
+            border: 2px solid var(--oro);
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+            transition: 0.3s ease;
+        }
+
+        .btn-dorado:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
+        }
+
+        /* SECCIÓN DE CONTENIDO */
+        .contenido-servicios {
+            flex: 1;
+            padding: 20px 5% 60px 5%;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--oro);
+            font-size: 2.8rem;
+            text-transform: uppercase;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+        }
+
+        .servicios-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tarjeta-detallada {
+            background: var(--gris-oscuro);
+            border: 2px solid #333;
+            border-top: 5px solid var(--oro);
+            padding: 40px 30px;
+            border-radius: 15px;
+            width: 300px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            transition: 0.3s;
+            backdrop-filter: blur(5px); /* Efecto de desenfoque moderno detrás de la tarjeta */
+        }
+
+        .tarjeta-detallada:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(212, 175, 55, 0.3);
+        }
+
+        .tarjeta-detallada i {
+            font-size: 3.5rem;
+            color: var(--oro);
+            margin-bottom: 20px;
+        }
+
+        .tarjeta-detallada h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tarjeta-detallada p {
+            font-size: 1rem;
+            color: #e0e0e0;
+        }
+
+        
+        footer { 
+            padding: 60px 20px; 
+            text-align: center; 
+            background: black; 
+            margin-top: auto;
+        }
+        .social { margin-bottom: 25px; }
+        .social a { color: var(--oro); font-size: 2.2rem; margin: 0 20px; text-decoration: none; transition: 0.3s; }
+        .social a:hover { color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="nav-superior">
+        <a href="risas.html" class="btn-dorado">← Volver al Inicio</a>
+        <a href="crud_jugadores.html" class="btn-dorado">Pre-Inscripción</a>
+    </div>
+
+    <section class="contenido-servicios">
+        <h2>A qué me dedico</h2>
+        <div class="servicios-grid">
+            
+            <div class="tarjeta-detallada">
+                <i class="fas fa-futbol"></i>
+                <h3>Club Risas?</h3>
+                <p>Fundador del Club Risas desde el 2005. Llevamos más de 20 años liderando e impulsando el talento deportivo, transformando la vida de cientos de niños y jóvenes a través de la disciplina y el amor por el fútbol.</p>
+            </div>
+
+            <div class="tarjeta-detallada">
+                <i class="fas fa-users"></i>
+                <h3>Politica</h3>
+                <p>He sido concejal y diputado de la asamblea. Una sólida experiencia en el liderazgo político y social que respalda nuestro compromiso inquebrantable con el desarrollo y bienestar de toda la comunidad.</p>
+            </div>
+
+            <div class="tarjeta-detallada">
+                <i class="fas fa-star"></i>
+                <h3>Formar Jovenes referentes</h3>
+                <p>Nuestra misión principal es forjar referentes dentro y fuera de la cancha. Educamos personas integrales con valores fuertes, listas para liderar el juego y guiar positivamente a las futuras generaciones.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="social">
+            <a href="https://instagram.com/proferisas" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@proferisas" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100008320491034" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>©️ 2026 Club Risas | Diseñado por <strong>@sebas.dg__</strong></p>
+    </footer>
+
+</body>
+</html>

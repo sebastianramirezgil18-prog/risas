@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de Datos | Club Risas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --oro: #d4af37;
+            --azul-oscuro: #0a0e1a;
+            --blanco: #ffffff;
+            --gris-oscuro: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--azul-oscuro);
+            color: var(--blanco);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            align-items: center;
+        }
+
+        /* CONTENEDOR DEL BOTÓN SUPERIOR */
+        .botones-nav {
+            display: flex;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        
+        .btn-dorado {
+            display: inline-block;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #f6d365 0%, var(--oro) 100%);
+            border: 2px solid var(--oro);
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+            transition: 0.3s ease;
+        }
+
+        .btn-dorado:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.5);
+        }
+
+        
+        .centrar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: var(--gris-oscuro);
+            border: 2px solid #333;
+            border-top: 5px solid var(--oro);
+            border-radius: 15px;
+            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: var(--oro);
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .centrar img {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+    
+        footer { 
+            padding: 60px 20px; 
+            text-align: center; 
+            background: black; 
+            margin-top: auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .social { margin-bottom: 25px; }
+        .social a { color: var(--oro); font-size: 2.2rem; margin: 0 20px; text-decoration: none; transition: 0.3s; }
+        .social a:hover { color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="botones-nav">
+        <a href="risas.html" class="btn-dorado">← Volver al Inicio</a>
+    </div>
+
+    <div class="centrar">
+        <h2>Modelo entidad relación</h2>
+        <img src="entidad.png" alt="base_relacional">
+    </div>
+
+    <footer>
+        <div class="social">
+            <a href="https://instagram.com/proferisas" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@proferisas" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100008320491034" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p>©️ 2026 Club Risas | Diseñado por <strong>@sebas.dg__</strong></p>
+    </footer>
+
+</body>
+</html>
